@@ -5,40 +5,116 @@
 
 (defsrc
   caps 
-;;  a 
-;;  s 
+  a 
+  s 
   d 
   f 
+  h
   j 
   k 
-;;  l 
-;;  ;
+  l 
+  ;
+  spc
+  o
+  p
+  u
+  m
+  ralt
+  i
+  0
+  -
+  lalt
+  rshift
 )
 (defvar
-  tap-time 150
+  tap-time 200 
   hold-time 200
 )
 
 (defalias
   caps lctl  
-;;  a (tap-hold $tap-time $hold-time a lmet)
-;;  s (tap-hold $tap-time $hold-time s lalt)
+  a (tap-hold $tap-time $hold-time a lalt)
+  s (tap-hold $tap-time $hold-time s lmet)
   d (tap-hold $tap-time $hold-time d lctl)
   f (tap-hold $tap-time $hold-time f lsft)
   j (tap-hold $tap-time $hold-time j rsft)
   k (tap-hold $tap-time $hold-time k rctl)
-;;  l (tap-hold $tap-time $hold-time l ralt)
-;;  ; (tap-hold $tap-time $hold-time ; rmet)
+  l (tap-hold $tap-time $hold-time l rmet)
+  ; (tap-hold $tap-time $hold-time ; ralt)
+  spc (tap-hold $tap-time $hold-time spc (layer-toggle symbols))
+  altgr bspc
+  lalt (layer-toggle navigation)
+  rsft =
 )
 
 (deflayer base
-  @caps 
-;;  @a 
-;;  @s 
-  @d 
-  @f 
-  @j 
-  @k 
-;;  @l 
-;;  @;
+  @caps   ;; caps
+  @a      ;; a
+  @s      ;; s
+  @d      ;; d
+  @f      ;; f
+  h       ;; h
+  @j      ;; j
+  @k      ;; k
+  @l      ;; l
+  @;      ;; ;
+  @spc    ;; spc
+  o       ;; o
+  p       ;; p
+  u       ;; u
+  m       ;; m
+  @altgr  ;; ralt
+  i       ;; i
+  0       ;; 0
+  -       ;; -
+  @lalt   ;; lalt
+  @rsft   ;; rsft
+)
+
+(deflayer symbols
+  _       ;; caps
+  _       ;; a
+  _       ;; s
+  _       ;; d
+  _       ;; f
+  _       ;; h
+  f12     ;; j
+  _       ;; k
+  S-[       ;; l  
+  S-]       ;; ;
+  _       ;; spc
+  [       ;; o
+  ]       ;; p
+  C-f12   ;; u
+  S-f12   ;; m
+  @altgr  ;; ralt
+  _       ;; i
+  _       ;; 0
+  _       ;; -
+  @lalt   ;; lalt
+  _       ;; rsft
+)
+
+(deflayer navigation
+  _       ;; caps
+  _       ;; a
+  _       ;; s
+  _       ;; d
+  _       ;; f
+  left    ;; h
+  down    ;; j
+  up      ;; k
+  right   ;; l
+  _       ;; ;
+  _       ;; spc
+  =       ;; hungarian accented character ;; o
+  _       ;; p
+  ]       ;; hungarian accented character ;; u
+  _       ;; m
+  @altgr  ;; ralt
+  `       ;; hungarian accented character ;; i
+  [       ;; hungarian accented character ;; 0
+  \       ;; hungarian accented character ;; -
+  @lalt   ;; lalt
+  _       ;; rsft
 )
