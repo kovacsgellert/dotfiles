@@ -4,35 +4,20 @@
 )
 
 (defsrc
-  caps 
-  a 
-  s 
-  d 
-  f 
-  h
-  j 
-  k 
-  l 
-  ;
-  spc
-  o
-  p
-  u
-  m
-  ralt
-  i
-  0
-  -
-  lalt
-  rshift
+  esc   f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f11   f12   prnt  slck  pause
+  grv   1     2     3     4     5     6     7     8     9     0     -     =     bspc  ins   home  pgup
+  tab   q     w     e     r     t     y     u     i     o     p     [     ]     \     del   end   pgdn
+  caps  a     s     d     f     g     h     j     k     l     ;     '     ret
+  lsft  z     x     c     v     b     n     m     ,     .     /     rsft                up
+  lctl  lmet  lalt              spc               ralt  rmet  rctl        left  down  rght
 )
+
 (defvar
   tap-time 200 
   hold-time 200
 )
 
 (defalias
-  caps lctl  
   a (tap-hold $tap-time $hold-time a lalt)
   s (tap-hold $tap-time $hold-time s lmet)
   d (tap-hold $tap-time $hold-time d lctl)
@@ -42,79 +27,35 @@
   l (tap-hold $tap-time $hold-time l rmet)
   ; (tap-hold $tap-time $hold-time ; ralt)
   spc (tap-hold $tap-time $hold-time spc (layer-toggle symbols))
-  altgr bspc
   lalt (layer-toggle navigation)
-  rsft =
+  f4 (tap-hold $tap-time $hold-time f4 lmet)
+  f5 (tap-hold $tap-time $hold-time f5 lctl)
+  f6 (tap-hold $tap-time $hold-time f6 lsft)
 )
 
 (deflayer base
-  @caps   ;; caps
-  @a      ;; a
-  @s      ;; s
-  @d      ;; d
-  @f      ;; f
-  h       ;; h
-  @j      ;; j
-  @k      ;; k
-  @l      ;; l
-  @;      ;; ;
-  @spc    ;; spc
-  o       ;; o
-  p       ;; p
-  u       ;; u
-  m       ;; m
-  @altgr  ;; ralt
-  i       ;; i
-  0       ;; 0
-  -       ;; -
-  @lalt   ;; lalt
-  @rsft   ;; rsft
+  _     _     _     _     _     _     _     _     _     _     _     _     _     _     _     _
+  _     _     _     _     _     _     _     _     _     _     _     _     _     _     _     _     _
+  _     _     _     _     _     _     _     _     _     _     _     _     _     _     _     _     _
+  lctl  @a    @s    @d    @f    _     h     @j    @k    @l    @;    _     _
+  _     _     _     _     _     _     _     m     _     _     _     =                 _
+  _     _     @lalt             @spc              bspc  _     _           _     _     _
 )
 
 (deflayer symbols
-  _       ;; caps
-  _       ;; a
-  _       ;; s
-  _       ;; d
-  _       ;; f
-  _       ;; h
-  f12     ;; j
-  _       ;; k
-  S-[       ;; l  
-  S-]       ;; ;
-  _       ;; spc
-  [       ;; o
-  ]       ;; p
-  C-f12   ;; u
-  S-f12   ;; m
-  @altgr  ;; ralt
-  _       ;; i
-  _       ;; 0
-  _       ;; -
-  @lalt   ;; lalt
-  _       ;; rsft
+  XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX
+  XX    XX    f10   f11   f12   XX    XX    XX    XX    S-9   S-0   XX    XX    XX    XX    XX    XX
+  XX    XX    7     8     9     XX    XX    C-f12 XX    [     ]     S-`   XX    XX    XX    XX    XX
+  XX    XX    4     5     6     XX    XX    f12   XX    S-[   S-]   `     XX
+  XX    0     1     2     3     XX    XX    S-f12 XX    XX    XX    XX                XX
+  XX    XX    _                 _                 _     XX    XX          XX    XX    XX
 )
 
 (deflayer navigation
-  _       ;; caps
-  _       ;; a
-  _       ;; s
-  _       ;; d
-  _       ;; f
-  left    ;; h
-  down    ;; j
-  up      ;; k
-  right   ;; l
-  _       ;; ;
-  _       ;; spc
-  =       ;; hungarian accented character ;; o
-  _       ;; p
-  ]       ;; hungarian accented character ;; u
-  _       ;; m
-  @altgr  ;; ralt
-  `       ;; hungarian accented character ;; i
-  [       ;; hungarian accented character ;; 0
-  \       ;; hungarian accented character ;; -
-  @lalt   ;; lalt
-  _       ;; rsft
+  XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX
+  XX    XX    f10   f11   f12   XX    XX    XX    XX    [     \     XX    XX    XX    XX    XX    XX
+  XX    XX    f7    f8    f9    XX    XX    ]     `     =     XX    XX    XX    XX    XX    XX    XX
+  XX    lalt  @f4   @f5   @f6   XX    left  down  up    right XX    XX    XX
+  XX    XX    f1    f2    f3    XX    XX    XX    XX    XX    XX    XX                XX
+  XX    XX    _                 _                 _     XX    XX          XX    XX    XX
 )
