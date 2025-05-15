@@ -4,7 +4,7 @@
     },
     "workbench.sideBar.location": "right",
     "vim.handleKeys": {
-        "<C-p>": false, 
+        "<C-p>": false,
         "<C-d>": true,
         "<C-s>": false,
         "<C-z>": false,
@@ -14,102 +14,276 @@
     "vim.leader": "<Space>",
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-            "before": [ "<leader>", "s", "y" ],
-            "after": [ "\"", "*", "y" ]  
+            "before": [
+                "<leader>",
+                "s",
+                "y"
+            ],
+            "after": [
+                "\"",
+                "*",
+                "y"
+            ]
         },
         {
-            "before": [ "<leader>", "s", "y", "y" ],
-            "after": [ "\"", "*", "y", "y" ]  
+            "before": [
+                "<leader>",
+                "s",
+                "y",
+                "y"
+            ],
+            "after": [
+                "\"",
+                "*",
+                "y",
+                "y"
+            ]
         },
         {
-            "before": [ "<leader>", "s", "p" ],
-            "after": [ "\"", "*", "p" ]
+            "before": [
+                "<leader>",
+                "s",
+                "p"
+            ],
+            "after": [
+                "\"",
+                "*",
+                "p"
+            ]
         },
         {
-            "before": [ "<leader>", "s", "d" ],
-            "after": [ "\"", "*", "d" ]
+            "before": [
+                "<leader>",
+                "s",
+                "d"
+            ],
+            "after": [
+                "\"",
+                "*",
+                "d"
+            ]
         },
         {
-            "before": [ "<leader>", "s", "d", "d" ],
-            "after": [ "\"", "*", "d", "d" ]
+            "before": [
+                "<leader>",
+                "s",
+                "d",
+                "d"
+            ],
+            "after": [
+                "\"",
+                "*",
+                "d",
+                "d"
+            ]
         },
         {
-            "before": ["J"],
-            "after": ["5", "j"]
+            "before": [
+                "J"
+            ],
+            "after": [
+                "5",
+                "j"
+            ]
         },
         {
-            "before": ["K"],
-            "after": ["5", "k"]
+            "before": [
+                "K"
+            ],
+            "after": [
+                "5",
+                "k"
+            ]
         },
         {
-            "before": ["<Leader>", "j"],
-            "after": ["J"]
+            "before": [
+                "<Leader>",
+                "j"
+            ],
+            "after": [
+                "J"
+            ]
         },
         {
-            "before": ["<C-h>"],
-            "after": ["<C-w>", "h"]
+            "before": [
+                "<C-h>"
+            ],
+            "after": [
+                "<C-w>",
+                "h"
+            ]
         },
         {
-            "before": ["<C-j>"],
-            "after": ["<C-w>", "j"]
+            "before": [
+                "<C-j>"
+            ],
+            "after": [
+                "<C-w>",
+                "j"
+            ]
         },
         {
-            "before": ["<C-k>"],
-            "after": ["<C-w>", "k"]
+            "before": [
+                "<C-k>"
+            ],
+            "after": [
+                "<C-w>",
+                "k"
+            ]
         },
         {
-            "before": ["<C-l>"],
-            "after": ["<C-w>", "l"]
+            "before": [
+                "<C-l>"
+            ],
+            "after": [
+                "<C-w>",
+                "l"
+            ]
         },
         {
-            "before": ["<Leader>", "t", "t"],
-            "commands": [":tabnew"]
+            "before": [
+                "<Leader>",
+                "t",
+                "t"
+            ],
+            "commands": [
+                ":tabnew"
+            ]
         },
         {
-            "before": ["<Leader>", "t", "n"],
-            "commands": [":tabnext"]
+            "before": [
+                "<Leader>",
+                "t",
+                "n"
+            ],
+            "commands": [
+                ":tabnext"
+            ]
         },
         {
-            "before": ["<Leader>", "t", "p"],
-            "commands": [":tabprev"]    
+            "before": [
+                "<Leader>",
+                "t",
+                "p"
+            ],
+            "commands": [
+                ":tabprev"
+            ]
         },
         {
-            "before": ["<Leader>", "t", "o"],
-            "commands": [":tabo"]
+            "before": [
+                "<Leader>",
+                "t",
+                "o"
+            ],
+            "commands": [
+                ":tabo"
+            ]
         },
         {
-            "before": ["<Leader>", "p"],
+            "before": [
+                "<Leader>",
+                "p"
+            ],
             "commands": [
                 "workbench.action.showCommands",
             ]
         },
-        {   
-            "before": ["<Leader>", "t"],
+        {
+            "before": [
+                "<Leader>",
+                "t"
+            ],
             "commands": [
                 "workbench.action.gotoSymbol",
             ]
         },
         {
-            "before": ["<Leader>", "w"],
-            "commands": ["workbench.action.files.save"]
+            "before": [
+                "<Leader>",
+                "w"
+            ],
+            "commands": [
+                "workbench.action.files.save"
+            ]
         },
         {
-            "before": ["<Leader>", "w", "a"],
-            "commands": ["workbench.action.files.saveAll"]
+            "before": [
+                "<Leader>",
+                "w",
+                "a"
+            ],
+            "commands": [
+                "workbench.action.files.saveAll"
+            ]
         }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {
-            "before": ["<Leader>", "s", "y"],
-            "after": ["\"", "*", "y"]
+            "before": [
+                "<Leader>",
+                "s",
+                "y"
+            ],
+            "after": [
+                "\"",
+                "*",
+                "y"
+            ]
         },
         {
-            "before": ["<Leader>", "s", "p"],
-            "after": ["\"", "*", "p"]
+            "before": [
+                "<Leader>",
+                "s",
+                "p"
+            ],
+            "after": [
+                "\"",
+                "*",
+                "p"
+            ]
         },
         {
-            "before": ["<Leader>", "s", "d"],
-            "after": ["\"", "*", "d"]
+            "before": [
+                "<Leader>",
+                "s",
+                "d"
+            ],
+            "after": [
+                "\"",
+                "*",
+                "d"
+            ]
         }
-    ]
+    ],
+    "git.autofetch": true,
+    "editor.lineNumbers": "relative",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "terminal.external.windowsExec": "",
+    "editor.largeFileOptimizations": false,
+    "[csharp]": {
+        "editor.defaultFormatter": "csharpier.csharpier-vscode"
+    },
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "editor.fontLigatures": true,
+    "chat.agent.enabled": true,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "github.copilot.selectedCompletionModel": "",
+    "terminal.integrated.allowedLinkSchemes": [
+        "file",
+        "http",
+        "https",
+        "mailto",
+        "vscode",
+        "vscode-insiders",
+        "docker-desktop"
+    ],
 }

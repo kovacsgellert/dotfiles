@@ -1,0 +1,18 @@
+// Place your key bindings in this file to override the defaults
+[
+    /*{
+        "key": "g i",
+        "command": "editor.action.goToImplementation",
+        "when": "editorTextFocus && (neovim.mode == normal || neovim.mode == visual)"
+    },
+    {
+        "key": "g r",
+        "command": "editor.action.referenceSearch.trigger",
+        "when": "editorTextFocus && (neovim.mode == normal || neovim.mode == visual)"
+    },
+    {
+        "key": "g d",
+        "command": "editor.action.revealDefinition",
+        "when": "editorTextFocus && (neovim.mode == normal || neovim.mode == visual)"
+    }*/
+]

@@ -35,4 +35,5 @@ keymap({"n", "v"}, "<leader>fd", "<cmd>lua require('vscode').action('editor.acti
 keymap({"n", "v"}, "gd", "<cmd>lua require('vscode').action('editor.action.revealDefinition')<CR>")
 keymap({"n", "v"}, "gi", "<cmd>lua require('vscode').action('editor.action.goToImplementation')<CR>")
 keymap({"n", "v"}, "gr", "<cmd>lua require('vscode').action('editor.action.referenceSearch.trigger')<CR>")
+keymap({"n", "v"}, "gh", "<cmd>lua require('vscode').action('editor.action.showHover')<CR>", opts)
 keymap({"n", "v"}, "<leader>ai", "<cmd>lua require('vscode').action('workbench.panel.chat')<CR>")
