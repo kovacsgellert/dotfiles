@@ -15,12 +15,11 @@ winget install --id Python.Python.3 -e --accept-package-agreements --accept-sour
 winget install --id OpenJS.NodeJS -e --accept-package-agreements --accept-source-agreements
 winget install --id Git.Git -e --accept-package-agreements --accept-source-agreements
 winget install --id Docker.DockerDesktop -e --accept-package-agreements --accept-source-agreements
-winget install --id Microsoft.VisualStudioCode -e --accept-package-agreements --accept-source-agreements
 winget install --id Microsoft.WSL -e --accept-package-agreements --accept-source-agreements
 winget install --id Canonical.Ubuntu -e --accept-package-agreements --accept-source-agreements
 winget install --id Canonical.Ubuntu.2204 -e --accept-package-agreements --accept-source-agreements
 winget install --id Microsoft.DotNet.SDK.9 -e --accept-package-agreements --accept-source-agreements
 winget install --id Starship.Starship -e --accept-package-agreements --accept-source-agreements
 winget install --id Neovim.Neovim --version 0.9.5 -e --accept-package-agreements --accept-source-agreements
-winget install --id Microsoft.LanguagePack-Hu -e --accept-package-agreements --accept-source-agreements
+winget install Microsoft.VisualStudioCode --override "/verysilent /suppressmsgboxes /mergetasks='!runcode,addcontextmenufiles,addcontextmenufolders,associatewithfiles,addtopath'"
 winget install --id Microsoft.VisualStudio.2022.Community -e --accept-package-agreements --accept-source-agreements --override "--add Microsoft.VisualStudio.Workload.NetWeb --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.Azure"

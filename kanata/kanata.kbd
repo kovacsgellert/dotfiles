@@ -1,4 +1,3 @@
-;; defsrc is still necessary
 (defcfg
   process-unmapped-keys yes
 )
@@ -31,13 +30,14 @@
   f4 (tap-hold $tap-time $hold-time f4 lmet)
   f5 (tap-hold $tap-time $hold-time f5 lctl)
   f6 (tap-hold $tap-time $hold-time f6 lsft)
+  ec (tap-hold $tap-time $hold-time esc lctl)
 )
 
 (deflayer base
   _     _     _     _     _     _     _     _     _     _     _     _     _     _     _     _
   _     _     _     _     _     _     _     _     _     _     _     _     _     _     _     _     _
   _     _     _     _     _     _     _     _     _     _     _     _     _     _     _     _     _
-  lctl  @a    @s    @d    @f    _     h     @j    @k    @l    @;    _     _
+  @ec   @a    @s    @d    @f    _     h     @j    @k    @l    @;    _     _
   _     _     _     _     _     _     _     m     _     _     _     =                 _
   _     _     @lalt             @spc              bspc  _     _           _     _     _
 )
