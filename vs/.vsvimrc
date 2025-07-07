@@ -3,15 +3,16 @@ let mapleader = "\<Space>"
 :set ignorecase
 :set smartcase
 
+:set number
+:set relativenumber
+
 nnoremap <leader>y "*y
 nnoremap <leader>yy "*yy
 nnoremap <leader>p "*p
 nnoremap <leader>d "*d
 nnoremap <leader>dd "*dd
 nnoremap <leader>tt :tabnew<CR>
-nnoremap <leader>to :tabo<CR>
-nnoremap <leader>ga :vsc Edit.GoToAll<CR>
-nnoremap <leader>wa :vsc File.SaveAll<CR>
+nnoremap <leader>to :vsc File.CloseOtherTabs<CR>
 nnoremap <leader>w :vsc File.Save<CR>
 
 nnoremap gi :vsc Edit.GoToImplementation<CR>
