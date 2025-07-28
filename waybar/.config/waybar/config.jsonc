@@ -132,5 +132,11 @@
         "return-type": "json",
         "interval": 5, // Check every 5 seconds
         "on-click": "~/.config/waybar/scripts/kanata-toggle.sh"
+  },
+  "hyprland/language": {
+    "format": "{}",
+    "format-en": "ENG",
+    "format-hu": "HUN",
+    "on-click": "hyprctl switchxkblayout current next"
   }
 }
