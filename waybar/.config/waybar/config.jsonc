@@ -70,10 +70,10 @@
   },
   "network": {
     "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
-    "format" : "{icon}",
-    "format-wifi" : "{icon}",
-    "format-ethernet" : "󰀂",
-    "format-disconnected" : "󰖪",
+    "format" : "({icon})",
+    "format-wifi" : "({icon})",
+    "format-ethernet" : "(󰀂)",
+    "format-disconnected" : "(󰖪)",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
@@ -85,7 +85,7 @@
     "format": "({icon} {capacity}%)",
     "format-discharging": "({icon} {capacity}%)",
     "format-charging":    "({capacity}% {icon})",
-    "format-plugged":     "",
+    "format-plugged":     "()",
     "format-icons": {
       "charging": [
         "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"
@@ -94,7 +94,7 @@
         "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
       ]
     },
-    "format-full": "󰂅",
+    "format-full": "(󰂅)",
     "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
     "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
     "interval": 5,
@@ -104,14 +104,14 @@
     }
   },
   "bluetooth": {
-    "format": "",
-    "format-disabled": "󰂲",
-    "format-connected": "",
+    "format": "()",
+    "format-disabled": "(󰂲)",
+    "format-connected": "()",
     "tooltip-format": "Devices connected: {num_connections}",
     "on-click": "blueberry"
   },
   "pulseaudio": {
-    "format": "{icon}",
+    "format": "({icon} {volume}%)",
     "on-click": "alacritty --class=Wiremix -e wiremix",
     "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
@@ -137,7 +137,7 @@
     "tooltip": false
   },
   "tray": {
-    "icon-size": 12,
+    "icon-size": 16,
     "spacing": 12
   },
   "custom/kanata-status": {
@@ -147,7 +147,7 @@
         "on-click": "~/.config/waybar/scripts/kanata-toggle.sh"
   },
   "hyprland/language": {
-    "format": "{}",
+    "format": "({})",
     "format-en": "ENG",
     "format-hu": "HUN",
     "on-click": "hyprctl switchxkblayout current next"
