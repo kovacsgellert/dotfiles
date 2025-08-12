@@ -6,6 +6,9 @@ keymap("n", "<Space>", "", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- use system clipboard
+vim.opt.clipboard:append('unnamedplus')
+
 -- better indent handling
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
