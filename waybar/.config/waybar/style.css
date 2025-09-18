@@ -37,6 +37,7 @@
 #bluetooth,
 #pulseaudio,
 #custom-omarchy,
+#custom-screenrecording-indicator,
 #custom-update {
   min-width: 12px;
   margin: 0 7.5px;
@@ -62,6 +63,16 @@ tooltip {
   opacity: 0;
 }
 
+#custom-screenrecording-indicator {
+  min-width: 12px;
+  margin-left: 8.75px;
+  font-size: 10px;
+}
+
+#custom-screenrecording-indicator.active {
+  color: #a55555;
+}
+
 #custom-kanata-status {
   margin-right: 12px;
 }
@@ -73,4 +84,3 @@ tooltip {
 #custom-kanata-status.stopped {
   color: #f38ba8;
 }
-
