@@ -33,14 +33,17 @@
 #tray,
 #cpu,
 #battery,
+#memory,
 #network,
 #bluetooth,
 #pulseaudio,
 #custom-omarchy,
 #custom-screenrecording-indicator,
-#custom-update {
+#custom-update,
+#custom-kanata-status,
+#language {
   min-width: 12px;
-  margin: 0 7.5px;
+  margin: 0 12px;
 }
 
 #custom-expand-icon {
