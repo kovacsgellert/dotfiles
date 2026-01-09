@@ -12,7 +12,7 @@
 )
 
 (defvar
-  tap-time 200 
+  tap-time 200
   hold-time 200
 )
 
@@ -25,37 +25,23 @@
   k (tap-hold $tap-time $hold-time k rctl)
   l (tap-hold $tap-time $hold-time l rmet)
   ; (tap-hold $tap-time $hold-time ; ralt)
-  spc (tap-hold $tap-time $hold-time spc (layer-toggle symbols))
-  lalt (layer-toggle navigation)
-  f4 (tap-hold $tap-time $hold-time f4 lmet)
-  f5 (tap-hold $tap-time $hold-time f5 lctl)
-  f6 (tap-hold $tap-time $hold-time f6 lsft)
-  ec (tap-hold $tap-time $hold-time esc lctl)
+  lalt (layer-toggle nav-hun)
 )
 
 (deflayer base
   _     _     _     _     _     _     _     _     _     _     _     _     _     _     _     _
   _     _     _     _     _     _     _     _     _     _     _     _     _     _     _     _     _
   _     _     _     _     _     _     _     _     _     _     _     _     _     _     _     _     _
-  @ec   @a    @s    @d    @f    _     h     @j    @k    @l    @;    _     _
-  _     _     _     _     _     _     _     m     _     _     _     =                 _
-  _     _     @lalt             @spc              bspc  _     _           _     _     _
+  esc   @a    @s    @d    @f    _     _     @j    @k    @l    @;    _     _
+  _     _     _     _     _     _     _     _     _     _     _     _                 _
+  _     _     @lalt             spc               bspc  _     _           _     _     _
 )
 
-(deflayer symbols
+(deflayer nav-hun
   XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX
-  XX    XX    f10   f11   f12   XX    XX    XX    XX    S-9   S-0   XX    XX    XX    XX    XX    XX
-  XX    XX    7     8     9     XX    XX    C-f12 XX    [     ]     S-`   XX    XX    XX    XX    XX
-  XX    XX    4     5     6     XX    XX    f12   XX    S-[   S-]   `     XX
-  XX    kp0   1     2     3     XX    XX    S-f12 XX    XX    XX    XX                XX
-  XX    XX    _                 _                 _     XX    XX          XX    XX    XX
-)
-
-(deflayer navigation
-  XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX
-  XX    XX    f10   f11   f12   XX    XX    XX    XX    XX    [     \    XX    XX    XX    XX    XX
-  XX    XX    f7    f8    f9    XX    XX    ]     `     =     XX    XX    XX    XX    XX    XX    XX
-  XX    lalt  @f4   @f5   @f6   XX    left  down  up    right XX    XX    XX
-  XX    XX    f1    f2    f3    XX    XX    XX    XX    XX    XX    XX                XX
+  XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    [     \    XX     XX    XX    XX    XX
+  XX    XX    XX    XX    XX    XX    XX    ]     `     =     XX    XX    XX    XX    XX    XX    XX
+  XX    lalt  lmet  lctl  lsft  XX    left  down  up    right XX    XX    XX
+  XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX                XX
   XX    XX    _                 _                 _     XX    XX          XX    XX    XX
 )
