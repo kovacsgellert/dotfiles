@@ -1,0 +1,147 @@
+# komorebi skhd keybindings
+# Translated from Omarchy Hyprland tiling-v2 + user bindings
+# Modifier mapping: SUPER -> cmd, ALT -> alt, SHIFT -> shift, CTRL -> ctrl
+# Workspace indexing: Hyprland 1-based -> komorebi 0-based
+
+# -----------------------------------------------
+# Close window
+# -----------------------------------------------
+cmd - w : komorebic close
+
+# -----------------------------------------------
+# Tiling controls
+# -----------------------------------------------
+cmd - t : komorebic toggle-float
+cmd - f : komorebic toggle-monocle
+cmd + ctrl - f : komorebic toggle-maximize
+cmd - p : komorebic toggle-pause
+
+# -----------------------------------------------
+# Move focus (arrow keys)
+# -----------------------------------------------
+cmd - left  : komorebic focus left
+cmd - right : komorebic focus right
+cmd - up    : komorebic focus up
+cmd - down  : komorebic focus down
+
+# -----------------------------------------------
+# Switch workspaces (cmd + 1-9, 0)
+# -----------------------------------------------
+cmd - 1 : komorebic focus-workspace 0
+cmd - 2 : komorebic focus-workspace 1
+cmd - 3 : komorebic focus-workspace 2
+cmd - 4 : komorebic focus-workspace 3
+cmd - 5 : komorebic focus-workspace 4
+cmd - 6 : komorebic focus-workspace 5
+cmd - 7 : komorebic focus-workspace 6
+cmd - 8 : komorebic focus-workspace 7
+cmd - 9 : komorebic focus-workspace 8
+cmd - 0 : komorebic focus-workspace 9
+
+# -----------------------------------------------
+# Move window to workspace (cmd + shift + 1-9, 0)
+# -----------------------------------------------
+cmd + shift - 1 : komorebic move-to-workspace 0
+cmd + shift - 2 : komorebic move-to-workspace 1
+cmd + shift - 3 : komorebic move-to-workspace 2
+cmd + shift - 4 : komorebic move-to-workspace 3
+cmd + shift - 5 : komorebic move-to-workspace 4
+cmd + shift - 6 : komorebic move-to-workspace 5
+cmd + shift - 7 : komorebic move-to-workspace 6
+cmd + shift - 8 : komorebic move-to-workspace 7
+cmd + shift - 9 : komorebic move-to-workspace 8
+cmd + shift - 0 : komorebic move-to-workspace 9
+
+# -----------------------------------------------
+# Move window silently to workspace (cmd + shift + alt + 1-9, 0)
+# -----------------------------------------------
+cmd + shift + alt - 1 : komorebic send-to-workspace 0
+cmd + shift + alt - 2 : komorebic send-to-workspace 1
+cmd + shift + alt - 3 : komorebic send-to-workspace 2
+cmd + shift + alt - 4 : komorebic send-to-workspace 3
+cmd + shift + alt - 5 : komorebic send-to-workspace 4
+cmd + shift + alt - 6 : komorebic send-to-workspace 5
+cmd + shift + alt - 7 : komorebic send-to-workspace 6
+cmd + shift + alt - 8 : komorebic send-to-workspace 7
+cmd + shift + alt - 9 : komorebic send-to-workspace 8
+cmd + shift + alt - 0 : komorebic send-to-workspace 9
+
+# -----------------------------------------------
+# Cycle workspaces (tab)
+# -----------------------------------------------
+cmd - tab             : komorebic cycle-workspace next
+cmd + shift - tab     : komorebic cycle-workspace previous
+
+# -----------------------------------------------
+# Swap windows (cmd + shift + arrows)
+# -----------------------------------------------
+cmd + shift - left  : komorebic swap left
+cmd + shift - right : komorebic swap right
+cmd + shift - up    : komorebic swap up
+cmd + shift - down  : komorebic swap down
+
+# -----------------------------------------------
+# Move workspaces to other monitors (cmd + shift + alt + arrows)
+# -----------------------------------------------
+cmd + shift + alt - left  : komorebic send-to-monitor-workspace left
+cmd + shift + alt - right : komorebic send-to-monitor-workspace right
+cmd + shift + alt - up    : komorebic send-to-monitor-workspace up
+cmd + shift + alt - down  : komorebic send-to-monitor-workspace down
+
+# -----------------------------------------------
+# Cycle windows on workspace (alt + tab)
+# -----------------------------------------------
+alt - tab         : komorebic cycle-focus next
+alt + shift - tab : komorebic cycle-focus previous
+
+# -----------------------------------------------
+# Resize active window
+# cmd + minus = shrink horizontal, cmd + equal = grow horizontal
+# cmd + shift + minus = shrink vertical, cmd + shift + equal = grow vertical
+# -----------------------------------------------
+cmd - 0x1B        : komorebic resize-edge left 100
+cmd - 0x18        : komorebic resize-edge right 100
+cmd + shift - 0x1B : komorebic resize-edge up 100
+cmd + shift - 0x18 : komorebic resize-edge down 100
+
+# -----------------------------------------------
+# Stack management (groups -> stacks)
+# -----------------------------------------------
+cmd - g                   : komorebic toggle-tiling
+cmd + alt - left          : komorebic stack left
+cmd + alt - right         : komorebic stack right
+cmd + alt - up            : komorebic stack up
+cmd + alt - down          : komorebic stack down
+cmd + alt - g             : komorebic unstack
+cmd + alt - tab           : komorebic cycle-stack next
+cmd + alt + shift - tab   : komorebic cycle-stack previous
+cmd + ctrl - left         : komorebic cycle-stack previous
+cmd + ctrl - right        : komorebic cycle-stack next
+
+# -----------------------------------------------
+# Layout controls
+# -----------------------------------------------
+cmd - j : komorebic flip-layout horizontal
+cmd - l : komorebic cycle-layout next
+
+# -----------------------------------------------
+# Application launchers (macOS equivalents)
+# -----------------------------------------------
+cmd - return              : open -a "Terminal"
+cmd + alt - return        : open -a "Terminal" --args tmux new
+cmd + shift - return      : open -a "Safari"
+cmd + shift - b           : open -a "Safari"
+cmd + shift + alt - b     : open -a "Safari" --args --private
+cmd + shift - e           : open -a "Finder"
+cmd + shift - s           : open -a "Spotify"
+cmd + shift - n           : open -a "Visual Studio Code"
+cmd + shift - a           : open "https://chatgpt.com"
+cmd + shift - y           : open "https://youtube.com"
+cmd + shift + alt - a     : open "https://gemini.google.com"
+cmd + shift - m           : open "https://messenger.com"
+
+# -----------------------------------------------
+# Komorebi management
+# -----------------------------------------------
+cmd + shift - q           : komorebic stop
+cmd + shift - r           : komorebic stop && komorebic start --bar

@@ -1,0 +1,56 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi-for-mac/master/schema.json",
+
+  "theme": {
+    "name": "CatppuccinMocha"
+  },
+
+  "animation": {
+    "enabled": true,
+    "duration": 200,
+    "fps": 60,
+    "style": "EaseOutQuint"
+  },
+
+  "border": true,
+  "border_width": 2,
+  "border_radius": 0,
+  "border_offset": -1,
+
+  "default_container_padding": 5,
+  "default_workspace_padding": 10,
+
+  "resize_delta": 100,
+  "mouse_follows_focus": true,
+  "cross_monitor_move_behaviour": "Insert",
+  "window_container_behaviour": "Create",
+
+  "monitors": [
+    {
+      "workspaces": [
+        { "name": "1", "layout": "BSP" },
+        { "name": "2", "layout": "BSP" },
+        { "name": "3", "layout": "BSP" },
+        { "name": "4", "layout": "BSP" },
+        { "name": "5", "layout": "BSP" },
+        { "name": "6", "layout": "BSP" },
+        { "name": "7", "layout": "BSP" },
+        { "name": "8", "layout": "BSP" },
+        { "name": "9", "layout": "BSP" },
+        { "name": "10", "layout": "BSP" }
+      ]
+    }
+  ],
+
+  "floating_applications": [
+    { "kind": "exe", "id": "1Password" },
+    { "kind": "exe", "id": "Bitwarden" },
+    { "kind": "exe", "id": "Calculator" },
+    { "kind": "exe", "id": "System Preferences" },
+    { "kind": "exe", "id": "System Settings" },
+    { "kind": "exe", "id": "Archive Utility" },
+    { "kind": "exe", "id": "Finder" },
+    { "kind": "exe", "id": "Steam Helper" },
+    { "kind": "exe", "id": "LocalSend" }
+  ]
+}
