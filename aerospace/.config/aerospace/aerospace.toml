@@ -1,6 +1,11 @@
 config-version = 2
 
-start-at-login = true
+start-at-login = false
+
+after-startup-command = [
+  'exec-and-forget borders active_color="glow(0xff00ffff)" width=10.0'
+]
+
 
 enable-normalization-flatten-containers = false
 enable-normalization-opposite-orientation-for-nested-containers = true
@@ -10,7 +15,7 @@ default-root-container-layout = 'tiles'
 default-root-container-orientation = 'auto'
 
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
-automatically-unhide-macos-hidden-apps = false
+automatically-unhide-macos-hidden-apps = true
 
 persistent-workspaces = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
 
@@ -24,8 +29,8 @@ PATH = '/opt/homebrew/bin:/opt/homebrew/sbin:${PATH}'
 preset = 'qwerty'
 
 [gaps]
-inner.horizontal = 5
-inner.vertical = 5
+inner.horizontal = 10
+inner.vertical = 10
 outer.left = 10
 outer.bottom = 10
 outer.top = 10
@@ -44,66 +49,61 @@ outer.right = 10
 10 = ['secondary', 'built-in']
 
 [mode.main.binding]
+cmd-h = []
+cmd-tab = 'focus --boundaries-action wrap-around-the-workspace dfs-next'
+cmd-shift-tab = 'focus --boundaries-action wrap-around-the-workspace dfs-prev'
+
 alt-enter = 'exec-and-forget open -na "Ghostty"'
-alt-shift-enter = 'exec-and-forget open -a "Safari"'
-alt-shift-e = 'exec-and-forget open -a "Finder"'
-alt-shift-b = 'exec-and-forget open -a "Safari"'
-alt-shift-s = 'exec-and-forget open -a "Spotify"'
-alt-shift-n = 'exec-and-forget open -a "Visual Studio Code"'
-alt-shift-a = 'exec-and-forget open "https://chatgpt.com"'
-alt-shift-y = 'exec-and-forget open "https://youtube.com"'
-alt-shift-m = 'exec-and-forget open "https://messenger.com"'
 
-alt-w = 'close'
-alt-f = 'fullscreen'
-alt-t = 'layout floating tiling'
-alt-p = 'layout tiles accordion'
-alt-slash = 'layout tiles horizontal vertical'
-alt-comma = 'layout accordion horizontal vertical'
-alt-r = 'flatten-workspace-tree'
+ctrl-q = 'close'
+ctrl-f = 'fullscreen'
+ctrl-t = 'layout floating tiling'
+ctrl-p = 'layout tiles accordion'
+ctrl-slash = 'layout tiles horizontal vertical'
+ctrl-comma = 'layout accordion horizontal vertical'
+ctrl-r = 'flatten-workspace-tree'
 
-alt-h = 'focus left'
-alt-j = 'focus down'
-alt-k = 'focus up'
-alt-l = 'focus right'
+ctrl-h = 'focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors left'
+ctrl-j = 'focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors down'
+ctrl-k = 'focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors up'
+ctrl-l = 'focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors right'
 
-alt-shift-h = 'swap left'
-alt-shift-j = 'swap down'
-alt-shift-k = 'swap up'
-alt-shift-l = 'swap right'
+ctrl-shift-h = 'move left'
+ctrl-shift-j = 'move down'
+ctrl-shift-k = 'move up'
+ctrl-shift-l = 'move right'
 
-alt-backslash = 'split horizontal'
-alt-minus = 'split vertical'
-alt-leftSquareBracket = 'resize smart -50'
-alt-rightSquareBracket = 'resize smart +50'
-alt-shift-leftSquareBracket = 'resize smart-opposite -50'
-alt-shift-rightSquareBracket = 'resize smart-opposite +50'
+ctrl-backslash = 'split horizontal'
+ctrl-minus = 'split vertical'
+ctrl-leftSquareBracket = 'resize smart -50'
+ctrl-rightSquareBracket = 'resize smart +50'
+ctrl-shift-leftSquareBracket = 'resize smart-opposite -50'
+ctrl-shift-rightSquareBracket = 'resize smart-opposite +50'
 
-alt-1 = 'workspace 1'
-alt-2 = 'workspace 2'
-alt-3 = 'workspace 3'
-alt-4 = 'workspace 4'
-alt-5 = 'workspace 5'
-alt-6 = 'workspace 6'
-alt-7 = 'workspace 7'
-alt-8 = 'workspace 8'
-alt-9 = 'workspace 9'
-alt-0 = 'workspace 10'
+ctrl-1 = 'workspace 1'
+ctrl-2 = 'workspace 2'
+ctrl-3 = 'workspace 3'
+ctrl-4 = 'workspace 4'
+ctrl-5 = 'workspace 5'
+ctrl-6 = 'workspace 6'
+ctrl-7 = 'workspace 7'
+ctrl-8 = 'workspace 8'
+ctrl-9 = 'workspace 9'
+ctrl-0 = 'workspace 10'
 
-alt-shift-1 = 'move-node-to-workspace 1'
-alt-shift-2 = 'move-node-to-workspace 2'
-alt-shift-3 = 'move-node-to-workspace 3'
-alt-shift-4 = 'move-node-to-workspace 4'
-alt-shift-5 = 'move-node-to-workspace 5'
-alt-shift-6 = 'move-node-to-workspace 6'
-alt-shift-7 = 'move-node-to-workspace 7'
-alt-shift-8 = 'move-node-to-workspace 8'
-alt-shift-9 = 'move-node-to-workspace 9'
-alt-shift-0 = 'move-node-to-workspace 10'
+ctrl-shift-1 = 'move-node-to-workspace 1'
+ctrl-shift-2 = 'move-node-to-workspace 2'
+ctrl-shift-3 = 'move-node-to-workspace 3'
+ctrl-shift-4 = 'move-node-to-workspace 4'
+ctrl-shift-5 = 'move-node-to-workspace 5'
+ctrl-shift-6 = 'move-node-to-workspace 6'
+ctrl-shift-7 = 'move-node-to-workspace 7'
+ctrl-shift-8 = 'move-node-to-workspace 8'
+ctrl-shift-9 = 'move-node-to-workspace 9'
+ctrl-shift-0 = 'move-node-to-workspace 10'
 
-alt-tab = 'workspace next --wrap-around'
-alt-shift-tab = 'workspace prev --wrap-around'
-alt-ctrl-tab = 'workspace-back-and-forth'
+alt-tab = 'focus --boundaries-action wrap-around-the-workspace dfs-next'
+alt-shift-tab = 'focus --boundaries-action wrap-around-the-workspace dfs-prev'
 alt-space = 'mode service'
 
 [mode.service.binding]
@@ -112,4 +112,8 @@ r = ['reload-config', 'mode main']
 f = ['layout floating tiling', 'mode main']
 b = ['balance-sizes', 'mode main']
 w = ['flatten-workspace-tree', 'mode main']
+h = ['join-with left', 'mode main']
+j = ['join-with down', 'mode main']
+k = ['join-with up', 'mode main']
+l = ['join-with right', 'mode main']
 backspace = ['close-all-windows-but-current', 'mode main']

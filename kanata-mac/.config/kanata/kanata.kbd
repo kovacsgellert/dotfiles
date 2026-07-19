@@ -1,0 +1,47 @@
+(defcfg
+  process-unmapped-keys yes
+)
+
+(defsrc
+  esc   f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f11   f12
+  grv   1     2     3     4     5     6     7     8     9     0     -     =     bspc
+  tab   q     w     e     r     t     y     u     i     o     p     [     ]
+  caps  a     s     d     f     g     h     j     k     l     ;     '     ret
+  lsft  nubs  z     x     c     v     b     n     m     ,     .     /     rsft  up
+  fn    lctl  lalt  lmet              spc               rmet  ralt  left  down  rght
+)
+
+(defvar
+  tap-time 200
+  hold-time 200
+)
+
+(defalias
+  a (tap-hold $tap-time $hold-time a lalt)
+  s (tap-hold $tap-time $hold-time s lmet)
+  d (tap-hold $tap-time $hold-time d lctl)
+  f (tap-hold $tap-time $hold-time f lsft)
+  j (tap-hold $tap-time $hold-time j rsft)
+  k (tap-hold $tap-time $hold-time k rctl)
+  l (tap-hold $tap-time $hold-time l rmet)
+  ; (tap-hold $tap-time $hold-time ; lalt)
+  spc (tap-hold $tap-time $hold-time spc (layer-toggle nav-hun))
+)
+
+(deflayer base
+  _     brdn  brup  mctl  lpad  blup  bldn  prev  pp    next  mute  vold  volu
+  _     _     _     _     _     _     _     _     _     _     _     _     _     _
+  _     _     _     _     _     _     _     _     _     _     _     _     _
+  esc   @a    @s    @d    @f    _     _     @j    @k    @l    @;    _     _
+  _     _     _     _     _     _     _     _     _     _     _     _     _     _
+  _     _     _     _                @spc               _     _     _     _     _
+)
+
+(deflayer nav-hun
+  XX    f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f11   f12
+  XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    [     \    XX    XX
+  XX    XX    XX    XX    XX    XX    XX    ]     `     =     XX    XX    XX
+  XX    lalt  lmet  lctl  lsft  XX    left  down  up    right XX    XX    XX
+  XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX
+  XX    XX    _     XX                _                 XX    _     XX    XX    XX
+)
