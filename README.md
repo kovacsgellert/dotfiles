@@ -2,10 +2,11 @@
 
 ## Layout
 
-- `common/` – cross-platform configs: nvim, alacritty, ghostty, starship, vimium, dotnet, vscode
+- `common/` – cross-platform configs
+- `dev/` - dev setup scripts
 - `hw/` – hardware resources: vial-lily58pro (keyboard layouts)
-- `windows/` – Windows-only: scripts, glzr (GlazeWM/Zebar), kanata, powershell, powertoys, vs (.vsvimrc)
-- `mac/` – macOS-only: aerospace, kanata, kanata-tray, karabiner, tmux, zsh (.zshrc), RectangleConfig.json
+- `windows/` – Windows-only
+- `mac/` – macOS-only
 - `linux/` – Linux-only (Omarchy): bash, display-tui, hypr, systemd, tmux, walker, waybar
 
 ## Stow (macOS/Linux)
