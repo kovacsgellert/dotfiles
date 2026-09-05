@@ -1,1 +1,0 @@
-VS Code settings are synced to my Github user.
