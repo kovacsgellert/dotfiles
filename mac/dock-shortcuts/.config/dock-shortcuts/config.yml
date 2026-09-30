@@ -1,0 +1,7 @@
+# dock-numbers settings — portable, safe to edit by hand or scripts.
+# Regenerated only when missing; your edits are preserved.
+start_at_login: true
+show_menu_bar_icon: true
+appearance: system  # system | light | dark
+badge_delay_ms: 0  # 0...500
+badges_always_visible: true

@@ -1,0 +1,9 @@
+[user]
+	name = Kovács Gellért
+	email = gellert.kovacs@qubiz.com
+[core]
+	autocrlf = input
+[includeIf "hasconfig:remote.*.url:git@*:kovacsgellert*/**"]
+	path = ~/.gitconfig-personal
+[includeIf "hasconfig:remote.*.url:*://*/kovacsgellert*/**"]
+	path = ~/.gitconfig-personal

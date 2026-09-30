@@ -7,4 +7,4 @@ eval "$(zoxide init zsh)"
 # Added by get-aspire-cli.sh
 export PATH="$HOME/.aspire/bin:$PATH"
 
-export PATH="$PATH:/Users/gellert/Library/Python/3.9/bin"
+export PATH="$PATH:$HOME/Library/Python/3.9/bin"

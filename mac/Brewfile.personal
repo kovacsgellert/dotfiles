@@ -1,0 +1,18 @@
+# Personal-only apps (NOT installed on the work laptop).
+# Install with: brew bundle --file=Brewfile.personal
+# Or: ./setup.sh --personal
+
+# --- Containers / network ---
+cask "orbstack"
+cask "tailscale-app"
+
+# --- Security / remote ---
+cask "bitwarden"
+cask "rustdesk"
+
+# --- Gaming ---
+cask "steam"
+
+# --- 3D / camera ---
+cask "bambu-studio"
+cask "insta360-studio"
